@@ -3,7 +3,7 @@
 //  TheMovieManagerTests
 //
 //  Created by Jarrod Parkes on 2/11/15.
-//  Copyright (c) 2015 Jarrod Parkes. All rights reserved.
+//  Copyright (c) 2015 Jarrod Parkes. All rights reserved. Clean by Karim Al Sabbagh 8/2019
 //
 
 import UIKit
