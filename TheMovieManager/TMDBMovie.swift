@@ -3,7 +3,7 @@
 //  TheMovieManager
 //
 //  Created by Jarrod Parkes on 2/11/15.
-//  Copyright (c) 2015 Jarrod Parkes. All rights reserved. Clean by Karim Al Sabbagh 8/2019
+//  Copyright (c) 2015 Jarrod Parkes. All rights reserved. Migrated to swift 5 by Karim Al Sabbagh 8/2019
 //
 
 struct TMDBMovie {
