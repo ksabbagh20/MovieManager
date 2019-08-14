@@ -166,7 +166,7 @@ class TMDBClient : NSObject {
     /* Helper: Given raw JSON, return a usable Foundation object */
     class func parseJSONWithCompletionHandler(data: NSData, completionHandler: (_ result: AnyObject?, _ error: NSError?) -> Void) {
         
-        var parsingError: NSError? = nil
+        let parsingError: NSError? = nil
         do{
             let parsedResult: AnyObject? =  try JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String : AnyObject] as AnyObject?
             print ("success")//JSONSerialization.JSONObjectWithData(data, options: JSONSerialization.ReadingOptions.AllowFragments, error: &parsingError)

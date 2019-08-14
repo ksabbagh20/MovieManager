@@ -21,20 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOW-Bj-KtY" userLabel="Debug Label">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="cuG-Ob-P31"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOW-Bj-KtY" userLabel="Debug Label">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-bT-qk6" userLabel="Login Button" customClass="BorderedButton" customModule="TheMovieManager" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-bT-qk6" userLabel="Login Button" customClass="BorderedButton" customModule="TheMovieManager" customModuleProvider="target">
                                 <rect key="frame" x="67" y="340" width="280" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="bXU-5x-iiO"/>
-                                    <constraint firstAttribute="height" constant="44" id="dVs-Z8-lBR"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Authenticate with TheMovieDB">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -42,44 +37,19 @@
                                     <action selector="loginButtonTouchWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WS2-uk-tNu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Movie Manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2T-4P-HrT" userLabel="Title Label">
-                                <rect key="frame" x="196.5" y="265" width="208.5" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="h8L-nh-K8K"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Movie Manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2T-4P-HrT" userLabel="Title Label">
+                                <rect key="frame" x="197" y="265" width="209" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera_128.png" translatesAutoresizingMaskIntoConstraints="NO" id="EFM-DS-VTW" userLabel="Camera Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera_128.png" translatesAutoresizingMaskIntoConstraints="NO" id="EFM-DS-VTW" userLabel="Camera Image View">
                                 <rect key="frame" x="144" y="151" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.35070900710000003" green="0.79530321839999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="JOW-Bj-KtY" secondAttribute="centerX" id="5i0-hx-t3x"/>
-                            <constraint firstAttribute="centerX" secondItem="EFM-DS-VTW" secondAttribute="centerX" constant="-1" id="7BK-eY-scg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JOW-Bj-KtY" secondAttribute="bottom" constant="90" id="9U1-jN-ni4"/>
-                            <constraint firstItem="JOW-Bj-KtY" firstAttribute="top" secondItem="Qsj-bT-qk6" secondAttribute="bottom" constant="20" id="Dfm-r9-1wO"/>
-                            <constraint firstAttribute="centerX" secondItem="Qsj-bT-qk6" secondAttribute="centerX" id="KcI-mo-Q6i"/>
-                            <constraint firstItem="Qsj-bT-qk6" firstAttribute="leading" secondItem="p2T-4P-HrT" secondAttribute="leading" id="Mxv-cV-H1v"/>
-                            <constraint firstItem="p2T-4P-HrT" firstAttribute="top" secondItem="EFM-DS-VTW" secondAttribute="bottom" constant="10" id="Ql3-w0-78o"/>
-                            <constraint firstItem="EFM-DS-VTW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="dcg-oB-Ts2"/>
-                            <constraint firstItem="p2T-4P-HrT" firstAttribute="trailing" secondItem="Qsj-bT-qk6" secondAttribute="trailing" id="kYy-wL-bu6"/>
-                            <constraint firstAttribute="centerX" secondItem="p2T-4P-HrT" secondAttribute="centerX" constant="-0.5" id="lfV-Gu-dxx"/>
-                            <constraint firstItem="JOW-Bj-KtY" firstAttribute="leading" secondItem="Qsj-bT-qk6" secondAttribute="leading" id="nkX-TU-k7o"/>
-                            <constraint firstItem="Qsj-bT-qk6" firstAttribute="top" secondItem="p2T-4P-HrT" secondAttribute="bottom" constant="10" id="u4o-gM-d7q"/>
-                            <constraint firstItem="Qsj-bT-qk6" firstAttribute="trailing" secondItem="JOW-Bj-KtY" secondAttribute="trailing" id="wmM-mU-f34"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="nkX-TU-k7o"/>
-                                <exclude reference="kYy-wL-bu6"/>
-                                <exclude reference="Mxv-cV-H1v"/>
-                                <exclude reference="wmM-mU-f34"/>
-                                <exclude reference="9U1-jN-ni4"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="debugTextLabel" destination="JOW-Bj-KtY" id="Phs-VQ-BZh"/>
@@ -331,17 +301,17 @@
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OV1-u7-N3U">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="zjZ-yT-1c0"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="JCr-W7-R9O" id="c47-8h-t7V"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OJJ-hL-Fmw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OJJ-hL-Fmw">
                                 <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="443" id="cGc-4h-dOc"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieSearchCell" id="VAa-UV-18v">
                                         <rect key="frame" x="0.0" y="22" width="414" height="44"/>
@@ -360,13 +330,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OV1-u7-N3U" firstAttribute="leading" secondItem="OJJ-hL-Fmw" secondAttribute="leading" id="0aA-rH-8Fq"/>
-                            <constraint firstItem="OV1-u7-N3U" firstAttribute="top" secondItem="nXG-ab-qmZ" secondAttribute="bottom" id="PY1-Y3-6Q8"/>
-                            <constraint firstItem="Lfj-rp-eCm" firstAttribute="top" secondItem="OJJ-hL-Fmw" secondAttribute="bottom" constant="238" id="dHR-eF-S07"/>
-                            <constraint firstItem="OV1-u7-N3U" firstAttribute="bottom" secondItem="OJJ-hL-Fmw" secondAttribute="top" id="qvp-Ku-NHC"/>
-                            <constraint firstItem="OJJ-hL-Fmw" firstAttribute="leading" secondItem="9n3-G9-9Vo" secondAttribute="leading" id="u6m-YX-eOe"/>
-                            <constraint firstItem="OV1-u7-N3U" firstAttribute="trailing" secondItem="OJJ-hL-Fmw" secondAttribute="trailing" id="yLt-e2-isC"/>
-                            <constraint firstAttribute="trailing" secondItem="OJJ-hL-Fmw" secondAttribute="trailing" id="ydO-uU-zsV"/>
+                            <constraint firstItem="OV1-u7-N3U" firstAttribute="trailing" secondItem="OJJ-hL-Fmw" secondAttribute="trailing" id="9qX-Fn-8zi"/>
+                            <constraint firstItem="OJJ-hL-Fmw" firstAttribute="bottom" secondItem="Lfj-rp-eCm" secondAttribute="top" id="Rho-eV-DXH"/>
+                            <constraint firstItem="OV1-u7-N3U" firstAttribute="top" secondItem="nXG-ab-qmZ" secondAttribute="bottom" id="Sk7-UV-Nu3"/>
+                            <constraint firstItem="OJJ-hL-Fmw" firstAttribute="top" secondItem="OV1-u7-N3U" secondAttribute="bottom" id="Y0c-Ey-vNS"/>
+                            <constraint firstItem="OV1-u7-N3U" firstAttribute="leading" secondItem="OJJ-hL-Fmw" secondAttribute="leading" id="aAJ-5w-lTV"/>
+                            <constraint firstAttribute="trailing" secondItem="OV1-u7-N3U" secondAttribute="trailing" id="ufH-k2-vGO"/>
+                            <constraint firstItem="OV1-u7-N3U" firstAttribute="leading" secondItem="9n3-G9-9Vo" secondAttribute="leading" id="uhx-6c-eRV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="Genre" id="jkb-3U-uCD"/>

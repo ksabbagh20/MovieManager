@@ -28,10 +28,10 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
                             cell.imageView!.image = image
                         }
                     } else {
-                        print("Image not found because\(error?.localizedDescription)")
+                        print("Image not found because\(String(describing: error?.localizedDescription))")
                     }
                 }else{
-                    print("Image not found:\(error?.localizedDescription)")
+                    print("Image not found:\(String(describing: error?.localizedDescription))")
                 }
                 
             })
@@ -64,7 +64,7 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.moviesTableView.reloadData()
                 }
             } else {
-                print(error)
+                print("Logout failed:\(String(describing: error?.localizedDescription))")
             }
         }
     }

@@ -64,7 +64,7 @@ class MovieDetailViewController: UIViewController {
                         }
                     }
                 } else {
-                    print(error)
+                    print("the problem is:\(String(describing: error?.localizedDescription))")
                 }
             }
             
@@ -86,7 +86,7 @@ class MovieDetailViewController: UIViewController {
                         }
                     }
                 } else {
-                    print(error)
+                    print("the probelm is:\(String(describing: error?.localizedDescription))")
                 }
             }
             
@@ -94,7 +94,7 @@ class MovieDetailViewController: UIViewController {
             if let posterPath = movie.posterPath {
                 TMDBClient.sharedInstance().taskForGETImage(size: TMDBClient.PosterSizes.DetailPoster, filePath: posterPath, completionHandler: { (imageData, error) in
                     if imageData != nil{
-                        if let image = UIImage(data: imageData as! Data) {
+                        if let image = UIImage(data: imageData! as Data) {
                             DispatchQueue.main.async {
                                 self.activityIndicator.alpha = 0.0
                                 self.activityIndicator.stopAnimating()
@@ -131,7 +131,7 @@ class MovieDetailViewController: UIViewController {
                             self.toggleFavoriteButton.tintColor = UIColor.black
                         }
                     } else {
-                        print("Unexpected status code \(status_code)")
+                        print("Unexpected status code \(String(describing: status_code))")
                     }
                 }
             }
@@ -146,7 +146,7 @@ class MovieDetailViewController: UIViewController {
                             self.toggleFavoriteButton.tintColor = nil
                         }
                     } else {
-                        print("Unexpected status code \(status_code)")
+                        print("Unexpected status code \(String(describing: status_code))")
                     }
                 }
             }
@@ -169,7 +169,7 @@ class MovieDetailViewController: UIViewController {
                             self.toggleWatchlistButton.tintColor = UIColor.black
                         }
                     } else {
-                        print("Unexpected status code \(status_code)")
+                        print("Unexpected status code \(String(describing: status_code))")
                     }
                 }
             }
@@ -184,7 +184,7 @@ class MovieDetailViewController: UIViewController {
                             self.toggleWatchlistButton.tintColor = nil
                         }
                     } else {
-                        print("Unexpected status code \(status_code)")
+                        print("Unexpected status code \(String(describing: status_code))")
                     }
                 }
             }

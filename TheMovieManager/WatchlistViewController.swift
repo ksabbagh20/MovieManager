@@ -21,17 +21,17 @@ class WatchlistViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.imageView!.contentMode = UIView.ContentMode.scaleAspectFit
         
         if let posterPath = movie.posterPath {
-            TMDBClient.sharedInstance().taskForGETImage(size: TMDBClient.PosterSizes.RowPoster, filePath: posterPath, completionHandler: { (imageData, error) in
+            _ = TMDBClient.sharedInstance().taskForGETImage(size: TMDBClient.PosterSizes.RowPoster, filePath: posterPath, completionHandler: { (imageData, error) in
                 if imageData != nil {
                     if let image = UIImage(data: imageData! as Data) {
                         DispatchQueue.main.async {
                             cell.imageView!.image = image
                         }
                     } else {
-                        print(error)
+                        print("basically:\(String(describing: error?.localizedDescription))")
                     }
                 } else{
-                    print("this is the reason\(error?.localizedDescription)")
+                    print("this is the reason\(String(describing: error?.localizedDescription))")
                 }
                 
             })
@@ -64,7 +64,7 @@ class WatchlistViewController: UIViewController, UITableViewDelegate, UITableVie
                     self.moviesTableView.reloadData()
                 }
             } else {
-                print(error)
+                print("Logout failed:\(String(describing: error?.localizedDescription))")
             }
         }
     }

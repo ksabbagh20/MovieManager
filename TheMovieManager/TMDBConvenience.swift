@@ -113,7 +113,7 @@ extension TMDBClient {
     func getSessionID(requestToken: String?, completionHandler: @escaping (_ success: Bool, _ sessionID: String?, _ errorString: String?) -> Void) {
         
         /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
-        var parameters = [TMDBClient.ParameterKeys.RequestToken : requestToken!]
+        let parameters = [TMDBClient.ParameterKeys.RequestToken : requestToken!]
         
         /* 2. Make the request */
         taskForGETMethod(method: Methods.AuthenticationSessionNew, parameters: parameters as [String : AnyObject]) { JSONResult, error in
@@ -134,7 +134,7 @@ extension TMDBClient {
     func getUserID(completionHandler: @escaping (_ success: Bool, _ userID: Int?, _ errorString: String?) -> Void) {
         
         /* 1. Specify parameters, method (if has {key}), and HTTP body (if POST) */
-        var parameters = [TMDBClient.ParameterKeys.SessionID : TMDBClient.sharedInstance().sessionID!]
+        let parameters = [TMDBClient.ParameterKeys.SessionID : TMDBClient.sharedInstance().sessionID!]
         
         /* 2. Make the request */
         taskForGETMethod(method: Methods.Account, parameters: parameters as [String : AnyObject]) { JSONResult, error in
@@ -171,7 +171,7 @@ extension TMDBClient {
                 
                 if let results = (JSONResult)?.value(forKey:TMDBClient.JSONResponseKeys.MovieResults) as? [[String : AnyObject]] {
                     
-                    var movies = TMDBMovie.moviesFromResults(results: results)
+                    let movies = TMDBMovie.moviesFromResults(results: results)
                     
                     completionHandler(movies, nil)
                 } else {
@@ -223,7 +223,7 @@ extension TMDBClient {
                 
                 if let results = (JSONResult)?.value(forKey:TMDBClient.JSONResponseKeys.MovieResults) as? [[String : AnyObject]] {
                     
-                    var movies = TMDBMovie.moviesFromResults(results: results)
+                    let movies = TMDBMovie.moviesFromResults(results: results)
                     
                     completionHandler(movies, nil)
                 } else {

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         /* Get the app delegate */
-        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate = UIApplication.shared.delegate as? AppDelegate
         
         /* Get the shared URL session */
         session = URLSession.shared
